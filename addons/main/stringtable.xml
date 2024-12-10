@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="mod-template">
     <Package name="Main">
-        <Key ID="STR_mod_author">
-            <English>OverlordZorn[CVO]</English>
-        </Key>
         <Key ID="STR_mod_URL">
             <English>https://github.com/OverlordZorn/ZRN-Modify-Gear</English>
+        </Key>
+        <Key ID="STR_mod_author">
+            <English>OverlordZorn[CVO]</English>
         </Key>
     </Package>
 </Project>

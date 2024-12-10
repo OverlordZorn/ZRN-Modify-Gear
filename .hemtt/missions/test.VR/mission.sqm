@@ -8,21 +8,21 @@ class EditorData
 	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=188;
+		nextID=190;
 	};
 	class Camera
 	{
-		pos[]={28.371502,7.1671267,-7.5596838};
-		dir[]={-0.26201481,-0.25315192,-0.93131679};
-		up[]={-0.06858024,0.96740955,-0.24376374};
-		aside[]={-0.96266431,-6.625778e-07,0.27083588};
+		pos[]={29.445345,7.1671267,-6.4322438};
+		dir[]={-0.63772708,-0.29766271,-0.71048951};
+		up[]={-0.19887941,0.9546507,-0.22157092};
+		aside[]={-0.74421364,-5.250331e-07,0.66800016};
 	};
 };
 binarizationWanted=0;
 sourceName="test";
 addons[]=
 {
-	"Characters_f_lxWS"
+	"A3_Characters_F"
 };
 class AddonsMetaData
 {
@@ -31,24 +31,17 @@ class AddonsMetaData
 		items=1;
 		class Item0
 		{
-			className="Characters_f_lxWS";
-			name="Arma 3 Creator DLC: Western Sahara - Characters and Clothing";
-			author="Rotators Collective";
-			url="https://sahara.rotators.net/";
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
-};
-dlcs[]=
-{
-	"ws"
 };
 randomSeed=4540948;
 class ScenarioData
 {
 	author="Overlord Zorn";
-};
-class CustomAttributes
-{
 };
 class Mission
 {
@@ -77,7 +70,7 @@ class Mission
 		class Item0
 		{
 			dataType="Group";
-			side="Civilian";
+			side="West";
 			class Entities
 			{
 				items=1;
@@ -86,22 +79,22 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={27.278679,5.0014391,-10.652818};
+						position[]={26.23534,5.0014391,-9.9187269};
 					};
-					side="Civilian";
+					side="West";
 					flags=7;
 					class Attributes
 					{
 						isPlayer=1;
 					};
-					id=187;
-					type="C_Djella_02_lxWS";
+					id=189;
+					type="B_Soldier_A_F";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=186;
+			id=188;
 		};
 	};
 };

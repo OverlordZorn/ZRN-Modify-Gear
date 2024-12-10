@@ -7,7 +7,14 @@ class CfgFunctions
 
             file = PATH_TO_FUNC;
 
-            class example { postInit = 1; };
+            class condition {};
+            
+            class getModifiableItems {};
+            
+            class createChildren {};
+            class createChildren_sub {};
+
+            class replace {};
 
         };
     };
