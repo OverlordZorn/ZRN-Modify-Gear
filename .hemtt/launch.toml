@@ -25,3 +25,7 @@ parameters = [
 [Test]
 extends = "default"
 mission = "test.VR"
+
+[WS]
+extends = "Test"
+dlc = ["ws"]
