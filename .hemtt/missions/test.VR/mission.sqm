@@ -8,28 +8,36 @@ class EditorData
 	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=190;
+		nextID=194;
 	};
 	class Camera
 	{
-		pos[]={29.445345,7.1671267,-6.4322438};
-		dir[]={-0.63772708,-0.29766271,-0.71048951};
-		up[]={-0.19887941,0.9546507,-0.22157092};
-		aside[]={-0.74421364,-5.250331e-07,0.66800016};
+		pos[]={20.168926,14.393026,-22.655146};
+		dir[]={-0.22901991,-0.59549892,0.77002007};
+		up[]={-0.16976421,0.80335611,0.57078815};
+		aside[]={0.95850402,0,0.28507894};
 	};
 };
 binarizationWanted=0;
 sourceName="test";
 addons[]=
 {
-	"A3_Characters_F"
+	"Characters_f_lxWS",
+	"Characters_f_lxWS_headgear"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=1;
+		items=2;
 		class Item0
+		{
+			className="Characters_f_lxWS";
+			name="Arma 3 Creator DLC: Western Sahara - Characters and Clothing";
+			author="Rotators Collective";
+			url="https://sahara.rotators.net/";
+		};
+		class Item1
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
@@ -37,6 +45,10 @@ class AddonsMetaData
 			url="https://www.arma3.com";
 		};
 	};
+};
+dlcs[]=
+{
+	"ws"
 };
 randomSeed=4540948;
 class ScenarioData
@@ -66,11 +78,11 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			dataType="Group";
-			side="West";
+			side="Civilian";
 			class Entities
 			{
 				items=1;
@@ -79,22 +91,37 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26.23534,5.0014391,-9.9187269};
+						position[]={16.520535,5.0014391,-14.805673};
 					};
-					side="West";
+					side="Civilian";
 					flags=7;
 					class Attributes
 					{
 						isPlayer=1;
 					};
-					id=189;
-					type="B_Soldier_A_F";
+					id=191;
+					type="C_Tak_02_C_lxWS";
 				};
 			};
 			class Attributes
 			{
 			};
-			id=188;
+			id=190;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17.238955,4.9462652,-11.969301};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=192;
+			type="Headgear_lxWS_H_turban_02_black";
 		};
 	};
 };

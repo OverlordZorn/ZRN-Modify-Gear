@@ -15,6 +15,7 @@
 * Public: No
 */
 
-params ["_unit","",""];
+params ["_player"];
 
-count [_unit] call FUNC(getModifiableItems) > 0
+private _return = count ([_player] call FUNC(getModifiableItems)) > 0;
+_return

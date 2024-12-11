@@ -9,10 +9,10 @@ class CfgFunctions
 
             class condition {};
             
-            class getModifiableItems {};
-            
-            class createChildren {};
             class createChildren_sub {};
+            class createChildren {};
+
+            class getModifiableItems {};
 
             class replace {};
 
