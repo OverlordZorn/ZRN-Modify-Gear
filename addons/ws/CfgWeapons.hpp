@@ -1,22 +1,11 @@
 class CfgWeapons
 {
-    class H_Shemag_khk;
+    #include "Turbans.hpp"
 
-    class lxWS_H_turban_01_black : H_Shemag_khk
-    {
-        PVAR(modifiableTo)[] = { "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black" };
-    };
-    class lxWS_H_turban_02_black : lxWS_H_turban_01_black
-    {
-        PVAR(modifiableTo)[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black" };        
-    };
-    class lxWS_H_turban_03_black : lxWS_H_turban_01_black
-    {
-        PVAR(modifiableTo)[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_04_black" };
-    };
-    class lxWS_H_turban_04_black : lxWS_H_turban_01_black
-    {
-        PVAR(modifiableTo)[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_03_black" };
-    };
+
+    // Cap (Ion) Forward and Reversed
+    class lxWS_H_CapB_rvs_blk;
+    class lxWS_H_CapB_rvs_blk_ION: lxWS_H_CapB_rvs_blk { PVAR(modifiableTo)[] = { "H_Cap_headphones_ion_lxws" }; };
+    class H_Cap_headphones_ion_lxws: lxWS_H_CapB_rvs_blk_ION { PVAR(modifiableTo)[] = { "lxWS_H_CapB_rvs_blk_ION" }; };
 };
 

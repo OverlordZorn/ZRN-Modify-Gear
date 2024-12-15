@@ -3,13 +3,13 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class GVAR(action) {
-                    displayName = "Modify Gear"; // Text shown to user
-                    condition = "[_player] call FUNC(condition)";
-                    exceptions[] = {};
-                    statement = "";
+                class Test_action {
+                    displayName = CSTRING(modify); // Text shown to user
                     icon = "";
-                    insertChildren = "[_player] call FUNC(createChildren)";
+                    condition = Q([_player] call FUNC(condition));
+                    statement = "";
+                    insertChildren = Q([_player] call FUNC(addModifyActions));
+                    exceptions[] = {"isNotSwimming","isNotInside","notOnMap","isNotSitting"};
                 };
             };
         };
