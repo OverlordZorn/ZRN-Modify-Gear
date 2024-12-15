@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -16,6 +16,4 @@
 */
 
 params ["_player"];
-
-private _return = count ([_player] call FUNC(getModifiableItems)) > 0;
-_return
+count ([_player] call FUNC(getModifiableItems)) > 0

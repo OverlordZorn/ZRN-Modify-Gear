@@ -6,7 +6,7 @@ class CfgVehicles {
                 class Test_action {
                     displayName = CSTRING(modify); // Text shown to user
                     icon = "";
-                    condition = Q([_player] call FUNC(condition));
+                    condition = Q([_player] call FUNC(addModifyActions_condition));
                     statement = "";
                     insertChildren = Q([_player] call FUNC(addModifyActions));
                     exceptions[] = {"isNotSwimming","isNotInside","notOnMap","isNotSitting"};

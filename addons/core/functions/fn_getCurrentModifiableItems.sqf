@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Retrieves a list of items on the user - will be cached for the duration of the interaction.
+* Function to retrieve currently worn, modifiable items. Cached Array for the duration of the interaction menu.
 *
 * Arguments:
 *
@@ -15,12 +15,11 @@
 * Public: No
 */
 
+
 params [
     ["_player",   objNull,    [objNull]]
 ];
 
-
-// Cleanup Cache once the interaction menu is closed
 [
     "ace_interactMenuClosed",
     {
@@ -30,9 +29,10 @@ params [
     }
 ] call CBA_fnc_addEventHandlerArgs;
 
+
 [
-    "items_all",
+    "modifiable_items_gear",
     {
-        flatten getUnitLoadout _player select { _x isEqualType "" && { _x != ""}};
+
     }
 ] call FUNC(cache_get);
