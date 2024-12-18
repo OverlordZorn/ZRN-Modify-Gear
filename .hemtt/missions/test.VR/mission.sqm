@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14.067525,6.8290091,-13.127607};
-		dir[]={0.8622514,-0.15792434,-0.48126051};
-		up[]={0.13790883,0.98745048,-0.07697311};
-		aside[]={-0.48737684,-6.0652383e-08,-0.87320805};
+		pos[]={8.5369406,7.5558949,-13.613162};
+		dir[]={0.94919598,-0.31473362,0.0052362182};
+		up[]={0.31474477,0.94917309,0.0017366181};
+		aside[]={0.0055140979,2.6910857e-07,-1.0000097};
 	};
 };
 binarizationWanted=0;
@@ -23,13 +23,15 @@ sourceName="test";
 addons[]=
 {
 	"Characters_f_lxWS",
+	"A3_Weapons_F",
+	"ace_intelitems",
 	"Characters_f_lxWS_headgear"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=2;
+		items=4;
 		class Item0
 		{
 			className="Characters_f_lxWS";
@@ -38,6 +40,20 @@ class AddonsMetaData
 			url="https://sahara.rotators.net/";
 		};
 		class Item1
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="ace_intelitems";
+			name="ACE3 - Intel Items";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item3
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
@@ -101,6 +117,27 @@ class Mission
 					class Attributes
 					{
 						isPlayer=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_lxWS_Tak_02_C";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="acex_intelitems_notepad";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=191;
 					type="C_Tak_02_C_lxWS";

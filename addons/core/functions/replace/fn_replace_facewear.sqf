@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Function to check if the player has an item that can be modified.
+* Function to replace a persons goggles/facewear.
 *
 * Arguments:
 *
@@ -15,5 +15,9 @@
 * Public: No
 */
 
-params ["_player"];
-count ([_player] call FUNC(getItems_modifiable_current)) > 0
+ZRN_LOG_MSG_1(init,_this);
+
+params ["_player", "_cfg_origin", "_cfg_tgt"];
+
+removeGoggles _player;
+_player addGoggles configName _cfg_tgt;

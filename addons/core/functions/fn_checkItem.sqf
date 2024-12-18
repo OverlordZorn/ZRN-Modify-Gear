@@ -1,4 +1,4 @@
-#include "../../script_component.hpp"
+#include "../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -21,4 +21,5 @@ params [
 
 
 if (isNull _cfg) exitWith {false};
-count configProperties [_cfg, Q(configName _x == QQPVAR(modifiableTo)), false] > 0
+// Checks if the config has the property without it being inherited(!)
+count configProperties [_cfg, Q(configName _x == QQPVAR(modifiableTo)), false] > 0 

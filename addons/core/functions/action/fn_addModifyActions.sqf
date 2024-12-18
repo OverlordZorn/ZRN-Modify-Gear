@@ -19,7 +19,7 @@
 params ["_unit"];
 
 
-private _modifiableItems = [_unit] call FUNC(getModifiableItems);
+private _modifiableItems = [_unit] call FUNC(getItems_modifiable_current);
 
 
 private _actions = [];

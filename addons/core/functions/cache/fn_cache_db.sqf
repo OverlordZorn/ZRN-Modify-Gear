@@ -17,11 +17,11 @@
 
 // Retrieve hashmap
 
-private _map = missionNamespace getVariable [GVAR(cache), "404"];
+private _map = missionNamespace getVariable [QGVAR(cache), "404"];
 
 if (_map isEqualTo "404") then {
     _map = createHashMap;
-    missionNamespace setVariable [GVAR(cache), _map];
+    missionNamespace setVariable [QGVAR(cache), _map];
 };
 
 _map

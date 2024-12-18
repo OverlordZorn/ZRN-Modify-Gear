@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -21,15 +21,7 @@ params [
 
 
 // Cleanup Cache once the interaction menu is closed
-[
-    "ace_interactMenuClosed",
-    {
-        if (_this isNotEqualTo [1]) exitWith {};
-        ["items_all"] call FUNC(cache_clear);
-        [_thisType, _thisId] call CBA_fnc_removeEventHandler;
-    }
-] call CBA_fnc_addEventHandlerArgs;
-
+["items_all"] call FUNC(clearOnClose);
 [
     "items_all",
     {

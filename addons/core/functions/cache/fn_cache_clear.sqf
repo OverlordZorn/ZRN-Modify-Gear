@@ -18,7 +18,9 @@
 
 // Retrieve hashmap
 
-params ["_key", "", [""]];
+params [ ["_key", "", [""]] ];
 
 private _map = missionNamespace getVariable [QGVAR(cache), "404"];
 _map deleteAt _key;
+
+if (count _map == 0) then { missionNamespace setVariable [QGVAR(cache),nil] };

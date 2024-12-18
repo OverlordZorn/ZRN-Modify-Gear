@@ -4,16 +4,29 @@ class CfgFunctions
     {
         class COMPONENT
         {
-
             file = PATH_TO_FUNC;
 
-            
-            class getItems {};
-            class getModifiableItems {};
+            class clearOnClose {};
+            class checkItem {};
+        };
 
+        class getItems
+        {
+            file = PATH_TO_FUNC_SUB(getItems);
+            class getItems_all {};
+            class getItems_modifiable_all {};
+            class getItems_modifiable_current {};
+            
+        };
+
+        class replace
+        {
+            file = PATH_TO_FUNC_SUB(replace);
 
             class replace {};
-
+            class replace_headgear {};
+            class replace_facewear {};
+            class replace_uniform  {};
         };
 
         class action
