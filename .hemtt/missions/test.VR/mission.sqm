@@ -6,16 +6,20 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=517;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
-		nextID=194;
+		nextID=198;
 	};
 	class Camera
 	{
-		pos[]={8.5369406,7.5558949,-13.613162};
-		dir[]={0.94919598,-0.31473362,0.0052362182};
-		up[]={0.31474477,0.94917309,0.0017366181};
-		aside[]={0.0055140979,2.6910857e-07,-1.0000097};
+		pos[]={14.593728,6.8069692,-12.252416};
+		dir[]={0.60327643,-0.42736253,-0.67341059};
+		up[]={0.28516918,0.9040724,-0.31832129};
+		aside[]={-0.74485052,3.7602149e-07,-0.66727275};
 	};
 };
 binarizationWanted=0;
@@ -25,13 +29,15 @@ addons[]=
 	"Characters_f_lxWS",
 	"A3_Weapons_F",
 	"ace_intelitems",
-	"Characters_f_lxWS_headgear"
+	"Characters_f_lxWS_headgear",
+	"ace_realisticnames",
+	"ace_ballistics"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="Characters_f_lxWS";
@@ -59,6 +65,13 @@ class AddonsMetaData
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
 	};
 };
@@ -97,7 +110,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=4;
 		class Item0
 		{
 			dataType="Group";
@@ -162,6 +175,53 @@ class Mission
 			};
 			id=192;
 			type="Headgear_lxWS_H_turban_02_black";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16,5,-12};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=196;
+			type="Weapon_hgun_Pistol_heavy_01_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17.833,5.2840548,-13.012};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=197;
+			type="ACE_Box_Ammo";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""hgun_Pistol_heavy_01_green_snds_F""],[1]],[[""11Rnd_45ACP_Mag""],[2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

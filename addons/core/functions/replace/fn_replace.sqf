@@ -22,13 +22,19 @@ _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
 
+private _additionalParams = "";
+
 private _replaceCode = switch ( _typeNumber ) do {
-    case TYPE_GOGGLE:   { FUNC(replace_facewear)  };
-    case TYPE_HEADGEAR: { FUNC(replace_headgear)  };
-    case TYPE_UNIFORM:  { FUNC(replace_uniform)   };
+    case TYPE_GOGGLE:   {                                 FUNC(replace_facewear) };
+    case TYPE_HEADGEAR: {                                 FUNC(replace_headgear) };
+    case TYPE_UNIFORM:  { _additionalParams = "UNIFORM";  FUNC(replace_uniform)  };
+    case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replace_uniform)  };
+    case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_uniform)  };
 };
 
-[_replaceCode, [_player, _cfg_origin, _cfg_tgt], 0.8] call CBA_fnc_waitAndExecute;
+
+
+[_replaceCode, [_player, _cfg_origin, _cfg_tgt, _additionalParams ], 0.8] call CBA_fnc_waitAndExecute;
 
 [_player, ["click", 15]] remoteExec ["say3D"]; // im to lazy to make a cba event and i wait until there's a common cba fnc for it or something.
 

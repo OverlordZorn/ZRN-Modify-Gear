@@ -10,6 +10,14 @@ class CfgFunctions
             class checkItem {};
         };
 
+        class ace_intel
+        {
+            file = PATH_TO_FUNC_SUB(ace_intel);
+            class getMagIDs {};
+            class getIndexFromMagID {};
+            class setIndexForMagID {};
+        };
+
         class getItems
         {
             file = PATH_TO_FUNC_SUB(getItems);
