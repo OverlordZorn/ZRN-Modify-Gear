@@ -38,9 +38,9 @@ if (_hasPhoto)    then { _hasPhoto    = [_player, "acex_intelitems_photo" ]    c
 //// Replace Wearable
 // Change Wearable
 switch (_case) do {
-    case "UNIFORM":  { _loadout # 3 set [0, className _cfg_tgt]; };
-    case "VEST":     { _loadout # 4 set [0, className _cfg_tgt]; };
-    case "BACKPACK": { _loadout # 5 set [0, className _cfg_tgt]; };
+    case "UNIFORM":  { _loadout # 3 set [0, configName _cfg_tgt]; };
+    case "VEST":     { _loadout # 4 set [0, configName _cfg_tgt]; };
+    case "BACKPACK": { _loadout # 5 set [0, configName _cfg_tgt]; };
     default { diag_log format ['[CVO](debug)(fn_replace_uniform) Failed! - _case: %1', _case]; };
 };
 
