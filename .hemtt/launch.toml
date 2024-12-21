@@ -30,3 +30,7 @@ mission = "test.VR"
 [WS]
 extends = "Test"
 dlc = ["ws"]
+
+[RF]
+extends = "Test"
+dlc = ["rf"]
