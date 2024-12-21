@@ -22,7 +22,7 @@ params ["_player", "_cfg_origin", "_cfg_tgt", "_case"];
 
 toFixed 0;
 private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
-private _loadout = getUnitLoadout _player;
+private _loadout = [_player] call CBA_fnc_getLoadout;
 
 
 //// Handle Special Cases - Pre Replace
@@ -38,15 +38,14 @@ if (_hasPhoto)    then { _hasPhoto    = [_player, "acex_intelitems_photo" ]    c
 //// Replace Wearable
 // Change Wearable
 switch (_case) do {
-    case "UNIFORM":  { _loadout # 3 set [0, configName _cfg_tgt]; };
-    case "VEST":     { _loadout # 4 set [0, configName _cfg_tgt]; };
-    case "BACKPACK": { _loadout # 5 set [0, configName _cfg_tgt]; };
+    case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfg_tgt]; };
+    case "VEST":     { _loadout # 0 # 4 set [0, configName _cfg_tgt]; };
+    case "BACKPACK": { _loadout # 0 # 5 set [0, configName _cfg_tgt]; };
     default { diag_log format ['[CVO](debug)(fn_replace_uniform) Failed! - _case: %1', _case]; };
 };
 
 // Apply new Loadout
-player setUnitLoadout _loadout;
-
+[_player, _loadout] call CBA_fnc_setLoadout;
 
 //// Handle Special Cases - Post Replace
 // ACE Intel Items
