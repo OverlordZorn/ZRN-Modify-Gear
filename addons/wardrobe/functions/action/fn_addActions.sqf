@@ -29,11 +29,11 @@ private _actions = [];
 
     private _aceAction = [
         _x                                      // * 0: Action name <STRING>
-        ,getText (_cfg_target >> "displayName") //  * 1: Name of the action shown in the menu <STRING>
-        ,getText (_cfg_target >> "picture")     //  * 2: Icon <STRING> "\A3\ui_f\data\igui\cfg\simpleTasks\types\backpack_ca.paa"
+        ,getText (_cfg >> "displayName")        //  * 1: Name of the action shown in the menu <STRING>
+        ,getText (_cfg >> "picture")            //  * 2: Icon <STRING> "\A3\ui_f\data\igui\cfg\simpleTasks\types\backpack_ca.paa"
         ,{}                                     //  * 3: Statement <CODE>
         ,{true}                                 //  * 4: Condition <CODE>
-        ,FUNC(addActions_children)        //  * 5: Insert children code <CODE> (Optional)
+        ,FUNC(addActions_children)              //  * 5: Insert children code <CODE> (Optional)
         ,_params                                //  * 6: Action parameters <ANY> (Optional)
     //    ,[0,0,0]                              //  * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
     //    ,20                                   //  * 8: Distance <NUMBER> (Optional)

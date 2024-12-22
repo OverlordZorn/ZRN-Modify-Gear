@@ -1,4 +1,4 @@
-class GVAR(base);
+class EGVAR(wardrobe,base);
 
 
 class CfgWeapons
