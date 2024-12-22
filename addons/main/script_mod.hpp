@@ -1,7 +1,7 @@
 #define MAINPREFIX zrn
-#define PREFIX modify
+#define PREFIX zrn
 
-#define PREFIX_BEAUTIFIED Modify
+#define PREFIX_BEAUTIFIED zrn
 
 
 #include "script_version.hpp"

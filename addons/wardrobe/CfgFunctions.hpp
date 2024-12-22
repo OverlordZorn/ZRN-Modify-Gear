@@ -6,8 +6,13 @@ class CfgFunctions
         {
             file = PATH_TO_FUNC;
 
+            class postInit { postInit = 1; };
+            class say3d {};
+
             class clearOnClose {};
             class checkItem {};
+            class getCfgDataRandom {};
+
         };
 
         class ace_intel
@@ -41,9 +46,12 @@ class CfgFunctions
         {
             file = PATH_TO_FUNC_SUB(action);
 
-            class addModifyActions {};
-            class addModifyActions_condition {};
-            class addModifyActions_children {};
+            class addActions {};
+            class addActions_condition {};
+            class addActions_children {};
+
+            class getAction_Name {};
+            class getAction_Icon {};
         };
 
         class cache

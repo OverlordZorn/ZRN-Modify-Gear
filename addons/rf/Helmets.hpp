@@ -4,14 +4,14 @@
 
 
 #define HELMET_VARIANT(color)\
-class CN(color): H_HelmetHeavy_Black_RF            { PVAR(modifiableTo)[] = { Q(CN(color)) }; };\
-class CN_VU(color): H_HelmetHeavy_VisorUp_Black_RF { PVAR(modifiableTo)[] = { Q(CN_VU(color)) }; };\
+class CN(color): H_HelmetHeavy_Black_RF            { class ADDON : GVAR(base) {modifiableTo)[] = { Q(CN(color)) }; }; };\
+class CN_VU(color): H_HelmetHeavy_VisorUp_Black_RF { class ADDON : GVAR(base) {modifiableTo)[] = { Q(CN_VU(color)) }; }; };\
 
 
 // Base Classes
 class H_HelmetAggressor_F;
-class H_HelmetHeavy_Black_RF         : H_HelmetAggressor_F    { PVAR(modifiableTo)[] = { "H_HelmetAggressor_F" } };
-class H_HelmetHeavy_VisorUp_Black_RF : H_HelmetHeavy_Black_RF { PVAR(modifiableTo)[] = { "H_HelmetHeavy_Black_RF" } };
+class H_HelmetHeavy_Black_RF         : H_HelmetAggressor_F    { class ADDON : GVAR(base) {modifiableTo)[] = { "H_HelmetAggressor_F" }};  };
+class H_HelmetHeavy_VisorUp_Black_RF : H_HelmetHeavy_Black_RF { class ADDON : GVAR(base) {modifiableTo)[] = { "H_HelmetHeavy_Black_RF" }};  };
 
 
 // Variants

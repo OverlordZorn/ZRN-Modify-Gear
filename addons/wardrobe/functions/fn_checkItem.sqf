@@ -22,4 +22,4 @@ params [
 
 if (isNull _cfg) exitWith {false};
 // Checks if the config has the property without it being inherited(!)
-count configProperties [_cfg, Q(configName _x == QQPVAR(modifiableTo)), false] > 0 
+count configProperties [_cfg >> QADDON, Q(configName _x == QQ(modifiableTo)), false] > 0 

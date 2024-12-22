@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="zrn">
+    <Package name="wardrobe">
+        <Container name="common">
+            <Key ID="STR_wardrobe_author">
+                <Original>OverlordZorn[CVO]</Original>
+                <English>OverlordZorn[CVO]</English>
+            </Key>
+        </Container>
+        <Container name="CBA_Settings_Categories">
+            <Key ID="STR_zrn_wardrobe_set_cat_main">
+                <Original>ACE Wardrobe</Original>
+                <English>ACE Wardrobe</English>
+            </Key>
+        </Container>
+        <Container name="CBA_Settings">
+            <Key ID="STR_zrn_wardrobe_set_cat_enable">
+                <Original>Enable</Original>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_set_cat_enable_desc">
+                <English>When Enabled, will let the player use the Wardrobe Actions.</English>
+            </Key>
+        </Container>
+    </Package>
+</Project>

@@ -32,15 +32,21 @@ private _replaceCode = switch ( _typeNumber ) do {
     case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_uniform)  };
 };
 
-
-
 [_replaceCode, [_player, _cfg_origin, _cfg_tgt, _additionalParams ], 0.8] call CBA_fnc_waitAndExecute;
 
-[_player, ["click", 15]] remoteExec ["say3D"]; // im to lazy to make a cba event and i wait until there's a common cba fnc for it or something.
 
+// Plays Random Sound
+private _sound = [_cfg_tgt >> Q(ADDON) >> "sound"] call FUNC(getCfgDataRandom);
+[QGVAR(EH_say3d), [_player, _sound]] call CBA_fnc_globalEvent;
+
+
+// Dart made a PR to CBA to impove depricated Functions. I plan to use these once cba gets updated.
+// [ [ _player ], [ _sound, 50 ] ] call CBA_fnc_globalSay;
+
+
+// Display 
 private _img = getText (_cfg_tgt >> "picture");
 if !(".paa" in _img) then { _img = [_img,"paa"] joinString "." };
-
 [
     CBA_fnc_notify,
     [

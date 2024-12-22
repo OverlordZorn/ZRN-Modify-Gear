@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project name="modify">
-    <Package name="modify">
-        <Key ID="STR_modify_core_modify">
-            <English>Modify</English>
-        </Key>
-    </Package>
-</Project>

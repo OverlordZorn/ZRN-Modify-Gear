@@ -2,8 +2,8 @@ class Uniform_Base;
 
 // Macros
 #define UNIFORM_BASE(class1,class2)\
-class class1: Uniform_Base { PVAR(modifiableTo)[] = { Q(class2) }; };\
-class class2: Uniform_Base { PVAR(modifiableTo)[] = { Q(class1) }; };\
+class class1: Uniform_Base { class ADDON : GVAR(base) { modifiableTo[] = { Q(class2) }; }; };\
+class class2: Uniform_Base { class ADDON : GVAR(base) { modifiableTo[] = { Q(class1) }; }; };\
 
 
 // Vanilla CTRG Uniform

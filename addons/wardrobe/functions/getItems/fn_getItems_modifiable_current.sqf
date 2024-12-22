@@ -28,9 +28,9 @@ params [
         private _array = [];
         {
             private _cfg = [_x] call CBA_fnc_getItemConfig;
-            if ( [_cfg] call FUNC(checkItem) && { count ([_cfg >> QPVAR(modifiableTo)] call BIS_fnc_getCfgDataArray) > 0 } )  then { _array pushBack _x; };
+            if ( [_cfg] call FUNC(checkItem) && { count ([_cfg >> QADDON >> "modifiableTo"] call BIS_fnc_getCfgDataArray) > 0 } )  then { _array pushBack _x; };
 
-        } forEach ( [headgear _player, goggles _player, uniform _player] - [""] );
+        } forEach ( [headgear _player, goggles _player, uniform _player, vest _player, backpack _player] - [""] );
         _array
     }
 ] call FUNC(cache_get);

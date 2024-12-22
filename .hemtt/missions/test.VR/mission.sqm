@@ -12,14 +12,14 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=201;
+		nextID=202;
 	};
 	class Camera
 	{
-		pos[]={-8.0936098,17.476908,2.2212288};
-		dir[]={0.72757733,-0.40321717,-0.55501997};
-		up[]={0.32058823,0.91510427,-0.24455525};
-		aside[]={-0.60650998,1.4901161e-08,-0.79507577};
+		pos[]={14.845472,7.4365573,-13.496458};
+		dir[]={0.20950305,-0.3989993,-0.8926971};
+		up[]={0.091162503,0.91695118,-0.38844541};
+		aside[]={-0.97354913,0,-0.22847785};
 	};
 };
 binarizationWanted=0;
@@ -30,7 +30,8 @@ addons[]=
 	"ace_realisticnames",
 	"ace_ballistics",
 	"A3_Characters_F",
-	"A3_Soft_F_Exp_Offroad_02"
+	"A3_Soft_F_Exp_Offroad_02",
+	"Characters_f_lxWS_headgear"
 };
 class AddonsMetaData
 {
@@ -69,7 +70,8 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"Expansion"
+	"Expansion",
+	"ws"
 };
 randomSeed=4540948;
 class ScenarioData
@@ -99,7 +101,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			dataType="Object";
@@ -207,6 +209,21 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16.015259,4.9462652,-17.999653};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=201;
+			type="Headgear_lxWS_H_turban_03_red";
 		};
 	};
 };

@@ -1,3 +1,5 @@
+class GVAR(base);
+
 
 class CfgWeapons
 {

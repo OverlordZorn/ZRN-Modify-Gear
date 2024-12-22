@@ -1,5 +1,5 @@
 mainprefix = "zrn"     # Ideally, replace "zrn" across the whole repo with your mod's mainprefix, example "t" (without the "")
-prefix = "modify"             # Ideally, replace "modify" across the whole repo with your mod's prefix, example "mod" (without the "") 
+prefix = "zrn"             # Ideally, replace "zrn" across the whole repo with your mod's prefix, example "mod" (without the "") 
 
 name = "Example Mod"
 

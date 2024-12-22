@@ -3,12 +3,12 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class Test_action {
+                class ADDON {
                     displayName = CSTRING(modify); // Text shown to user
                     icon = "";
-                    condition = Q([_player] call FUNC(addModifyActions_condition));
+                    condition = Q([_player] call FUNC(addActions_condition));
                     statement = "";
-                    insertChildren = Q([_player] call FUNC(addModifyActions));
+                    insertChildren = Q([_player] call FUNC(addActions));
                     exceptions[] = {"isNotSwimming","isNotInside","notOnMap","isNotSitting"};
                 };
             };

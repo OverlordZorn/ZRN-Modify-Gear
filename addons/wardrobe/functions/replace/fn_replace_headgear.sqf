@@ -17,7 +17,6 @@
 
 ZRN_LOG_MSG_1(init,_this);
 
-
 params ["_player", "_cfg_origin", "_cfg_tgt"];
 
 removeHeadgear _player;

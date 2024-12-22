@@ -16,11 +16,12 @@
 */
 
 params ["_target", "_player", "_actionParams"];
+
 _actionParams params ["_modifiableItem"];
 
 private _cfg_origin = [_modifiableItem] call CBA_fnc_getItemConfig;
 
-private _newItems = [_cfg_origin >> QPVAR(modifiableTo)] call BIS_fnc_getCfgDataArray;
+private _newItems = [_cfg_origin >> QADDON >> "modifiableTo"] call BIS_fnc_getCfgDataArray;
 
 private _actions = [];
 
@@ -32,8 +33,8 @@ private _actions = [];
 
     private _aceAction = [
         _targetItem                             //  * 0: Action name <STRING>
-        ,getText (_cfg_target >> "displayName") //  * 1: Name of the action shown in the menu <STRING>
-        ,getText (_cfg_target >> "picture")     //  * 2: Icon <STRING> "\A3\ui_f\data\igui\cfg\simpleTasks\types\backpack_ca.paa"
+        ,[_cfg] call FUNC(getAction_Name)        //  * 1: Name of the action shown in the menu <STRING>
+        ,[_cfg] call FUNC(getAction_Icon)        //  * 2: Icon <STRING> "\A3\ui_f\data\igui\cfg\simpleTasks\types\backpack_ca.paa"
         ,FUNC(replace)                          //  * 3: Statement <CODE>
         ,{true}                                 //  * 4: Condition <CODE>
         ,{}                                     //  * 5: Insert children code <CODE> (Optional)
