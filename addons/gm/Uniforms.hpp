@@ -54,28 +54,27 @@ class gm_ge_uniform_soldier_90_flk        : gm_ge_uniform_soldier_90_base { clas
 class gm_ge_uniform_soldier_rolled_90_flk : gm_ge_uniform_soldier_90_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up)   { modifiableTo[] = { Q(gm_ge_uniform_soldier_90_flk) }; }; };
 
 
-class gm_ge_army_uniform_soldier_bdu_80_wdl;
-class gm_ge_army_uniform_soldier_bdu_rolled_80_wdl;
-
-class gm_xx_uniform_soldier_bdu_80_wdl        : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_down) { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_rolled_80_wdl) }; }; };
-class gm_xx_uniform_soldier_bdu_rolled_80_wdl : gm_ge_army_uniform_soldier_bdu_rolled_80_wdl { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up)   { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_wdl) }; }; };
-
-class gm_xx_uniform_soldier_bdu_80_oli        : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_down) { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_rolled_80_oli) }; }; };
-class gm_xx_uniform_soldier_bdu_rolled_80_oli : gm_ge_army_uniform_soldier_bdu_rolled_80_wdl { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up)   { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_oli) }; }; };
 
 
 // Gloves
-// { class PVAR(wardrobe,base_U_gloves_on)  { modifiableTo[] = { Q() }; }; };
-// { class PVAR(wardrobe,base_U_gloves_off) { modifiableTo[] = { Q() }; }; };
 
-class gm_gc_army_uniform_soldier_gloves_80_str
-class gm_gc_army_uniform_soldier_80_str
+class gm_gc_uniform_soldier_80_base;
+class gm_gc_army_uniform_soldier_gloves_80_str : gm_gc_uniform_soldier_80_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_on)  { modifiableTo[] = { Q(gm_gc_army_uniform_soldier_80_str)        }; }; };
+class gm_gc_army_uniform_soldier_80_str        : gm_gc_uniform_soldier_80_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_off) { modifiableTo[] = { Q(gm_gc_army_uniform_soldier_gloves_80_str) }; }; };
 
-class gm_ge_army_uniform_soldier_gloves_80_ols
-class gm_ge_army_uniform_soldier_80_ols
+class gm_ge_uniform_soldier_80_base;
+class gm_ge_army_uniform_soldier_gloves_80_ols : gm_ge_uniform_soldier_80_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_on)  { modifiableTo[] = { Q(gm_ge_army_uniform_soldier_80_ols)        }; }; };
+class gm_ge_army_uniform_soldier_80_ols        : gm_ge_uniform_soldier_80_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_off) { modifiableTo[] = { Q(gm_ge_army_uniform_soldier_gloves_80_ols) }; }; };
 
-class gm_xx_uniform_soldier_bdu_80_wdl
-class gm_xx_uniform_soldier_bdu_nogloves_80_wdl
 
-class gm_xx_uniform_soldier_bdu_80_oli
-class gm_xx_uniform_soldier_bdu_nogloves_80_oli
+// Mixed case -> Base Interaction
+class gm_ge_army_uniform_soldier_bdu_80_wdl;
+class gm_ge_army_uniform_soldier_bdu_rolled_80_wdl;
+
+class gm_xx_uniform_soldier_bdu_80_wdl          : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_on)    { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_rolled_80_wdl), Q(gm_xx_uniform_soldier_bdu_nogloves_80_wdl) }; }; };
+class gm_xx_uniform_soldier_bdu_rolled_80_wdl   : gm_ge_army_uniform_soldier_bdu_rolled_80_wdl { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up)   { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_wdl),        Q(gm_xx_uniform_soldier_bdu_nogloves_80_wdl) }; }; };
+class gm_xx_uniform_soldier_bdu_nogloves_80_wdl : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base)                { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_wdl),        Q(gm_xx_uniform_soldier_bdu_rolled_80_wdl)   }; }; };
+
+class gm_xx_uniform_soldier_bdu_80_oli          : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_on)    { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_rolled_80_oli), Q(gm_xx_uniform_soldier_bdu_nogloves_80_oli) }; }; };
+class gm_xx_uniform_soldier_bdu_rolled_80_oli   : gm_ge_army_uniform_soldier_bdu_rolled_80_wdl { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up)   { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_oli),        Q(gm_xx_uniform_soldier_bdu_nogloves_80_oli) }; }; };
+class gm_xx_uniform_soldier_bdu_nogloves_80_oli : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base)                { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_oli),        Q(gm_xx_uniform_soldier_bdu_rolled_80_oli)   }; }; };
