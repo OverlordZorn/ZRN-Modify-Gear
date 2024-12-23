@@ -21,12 +21,16 @@ class GVAR(base)
 };
 
 // Common Base Class for Uniforms with Sleeves Up/Down Variants
-class GVAR(base_U_sleeves_up) : GVAR(base) { alternativeDisplayName = CSTRING(sleevesUp); duration = 3; };
-class GVAR(base_U_sleeves_down) : GVAR(base) { alternativeDisplayName = CSTRING(sleevesDown); duration = 3; };
+class GVAR(base_U_sleeves_up)   : GVAR(base) { alternativeDisplayName = CSTRING(sleevesUp);   };
+class GVAR(base_U_sleeves_down) : GVAR(base) { alternativeDisplayName = CSTRING(sleevesDown); };
+
+// Common Base Class for Uniforms with Sleeves Up/Down Variants
+class GVAR(base_U_gloves_on)  : GVAR(base) { alternativeDisplayName = CSTRING(glovesOn);  };
+class GVAR(base_U_gloves_off) : GVAR(base) { alternativeDisplayName = CSTRING(glovesOff); };
 
 
 // Common Base Class for Uniforms who are open/closed in the front
-class GVAR(base_U_jacket_open) : GVAR(base) { alternativeDisplayName = CSTRING(jacketOpen); };
+class GVAR(base_U_jacket_open)   : GVAR(base) { alternativeDisplayName = CSTRING(jacketOpen);  };
 class GVAR(base_U_jacket_closed) : GVAR(base) { alternativeDisplayName = CSTRING(jacketClose); };
 
 

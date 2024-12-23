@@ -26,6 +26,14 @@
                 <Original>Wardrobe</Original>
                 <English>Wardrobe</English>
             </Key>
+            <Key ID="STR_zrn_wardrobe_glovesOff">
+                <Original>Take Gloves Off</Original>
+                <English>Take Gloves Off</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_glovesOn">
+                <Original>Wear Gloves</Original>
+                <English>Wear Gloves</English>
+            </Key>
             <Key ID="STR_zrn_wardrobe_jacketClose">
                 <Original>Close Jacket</Original>
                 <English>Close Jacket</English>
