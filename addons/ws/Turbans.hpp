@@ -1,3 +1,5 @@
+// CfgWeapons
+
 // MACROS
 #define CN(version,color) lxWS_H_turban_##version##_##color
 #define QCN(version,color) Q(CN(version,color))

@@ -30,6 +30,8 @@ addons[]=
 	"ace_realisticnames",
 	"ace_ballistics",
 	"A3_Characters_F",
+	"A3_Characters_F_Enoch",
+	"zrn_vanilla",
 	"A3_Soft_F_Exp_Offroad_02",
 	"Characters_f_lxWS_headgear"
 };
@@ -37,7 +39,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=6;
 		class Item0
 		{
 			className="A3_Weapons_F";
@@ -61,6 +63,20 @@ class AddonsMetaData
 		};
 		class Item3
 		{
+			className="A3_Characters_F_Enoch";
+			name="Arma 3 Contact Platform - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="zrn_vanilla";
+			name="zrn - Compatibility for Vanilla Assets";
+			author="OverlordZorn[CVO]";
+			url="https://github.com/OverlordZorn/ZRN-Modify-Gear";
+		};
+		class Item5
+		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
@@ -70,6 +86,7 @@ class AddonsMetaData
 };
 dlcs[]=
 {
+	"Enoch",
 	"Expansion",
 	"ws"
 };
@@ -77,6 +94,9 @@ randomSeed=4540948;
 class ScenarioData
 {
 	author="Overlord Zorn";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -168,6 +188,17 @@ class Mission
 					class Attributes
 					{
 						isPlayer=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_I_E_Uniform_01_shortsleeve_F";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+						};
 					};
 					id=199;
 					type="C_man_polo_1_F";

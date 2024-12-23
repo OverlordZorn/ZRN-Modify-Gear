@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="zrn">
     <Package name="wardrobe">
-        <Container name="common">
+        <Container name="meta">
             <Key ID="STR_wardrobe_author">
                 <Original>OverlordZorn[CVO]</Original>
                 <English>OverlordZorn[CVO]</English>
@@ -19,6 +19,36 @@
             </Key>
             <Key ID="STR_zrn_wardrobe_set_cat_enable_desc">
                 <English>When Enabled, will let the player use the Wardrobe Actions.</English>
+            </Key>
+        </Container>
+        <Container name="Action">
+            <Key ID="STR_zrn_wardrobe_actionTitle">
+                <Original>Wardrobe</Original>
+                <English>Wardrobe</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_jacketClose">
+                <Original>Close Jacket</Original>
+                <English>Close Jacket</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_jacketOpen">
+                <Original>Open Jacket</Original>
+                <English>Open Jacket</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_sleevesDown">
+                <Original>Roll sleeves Down</Original>
+                <English>Roll sleeves Down</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_sleevesUp">
+                <Original>Roll sleeves Up</Original>
+                <English>Roll sleeves Up</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_visorDown">
+                <Original>Visor Down</Original>
+                <English>Visor Down</English>
+            </Key>
+            <Key ID="STR_zrn_wardrobe_visorUp">
+                <Original>Visor Up</Original>
+                <English>Visor Up</English>
             </Key>
         </Container>
     </Package>

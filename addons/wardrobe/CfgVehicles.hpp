@@ -4,12 +4,12 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class ADDON {
-                    displayName = CSTRING(modify); // Text shown to user
+                    displayName = CSTRING(actionTitle); // Text shown to user
                     icon = "";
                     condition = Q([_player] call FUNC(addActions_condition));
                     statement = "";
                     insertChildren = Q([_player] call FUNC(addActions));
-                    exceptions[] = {"isNotSwimming","isNotInside","notOnMap","isNotSitting"};
+                    exceptions[] = {"isNotSwimming","isNotSitting"};
                 };
             };
         };

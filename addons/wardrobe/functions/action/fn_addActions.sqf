@@ -20,12 +20,14 @@ params ["_unit"];
 
 
 private _modifiableItems = [_unit] call FUNC(getItems_modifiable_current);
-
+diag_log format ['[CVO](debug)(fn_addActions) _modifiableItems: %1', _modifiableItems];
 private _actions = [];
 
 {
     private _params = [_x];
     private _cfg = [_x] call CBA_fnc_getItemConfig;
+
+    diag_log format ['[CVO](debug)(fn_addActions) _cfg: %1', _cfg];
 
     private _aceAction = [
         _x                                      // * 0: Action name <STRING>

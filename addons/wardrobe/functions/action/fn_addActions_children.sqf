@@ -21,7 +21,7 @@ _actionParams params ["_modifiableItem"];
 
 private _cfg_origin = [_modifiableItem] call CBA_fnc_getItemConfig;
 
-private _newItems = [_cfg_origin >> QADDON >> "modifiableTo"] call BIS_fnc_getCfgDataArray;
+private _newItems = [_cfg_origin >> QPVAR(wardrobe) >> "modifiableTo"] call BIS_fnc_getCfgDataArray;
 
 private _actions = [];
 

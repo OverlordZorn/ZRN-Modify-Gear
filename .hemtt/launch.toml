@@ -27,6 +27,15 @@ parameters = [
 extends = "default"
 mission = "test.VR"
 
+
+[Test-Debugger]
+extends = "WS"
+workshop = [
+    "1645973522", # Intercept Minimal Dev
+    "1585582292", # Arma Debug Engine
+]
+
+
 [WS]
 extends = "Test"
 dlc = ["ws"]
@@ -34,3 +43,11 @@ dlc = ["ws"]
 [RF]
 extends = "Test"
 dlc = ["rf"]
+
+[GM]
+extends = "Test"
+dlc = ["gm"]
+
+[VN]
+extends = "Test"
+dlc = ["vn"]

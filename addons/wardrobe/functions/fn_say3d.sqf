@@ -15,11 +15,21 @@
 * Public: No
 */
 
-#define RADIUS 50
-
 params [
     ["_source",     objNull,    [objNull]   ],
-    ["_sound",      "",         [""]        ]
+    ["_sound",      [""],        ["", []]   ]
 ];
 
-_source say3D [_sound, RADIUS];
+if (_sound isEqualType [] && {_sound#0 == ""} || {_sound isEqualType "" && {_sound == ""}}) exitWith {};
+
+_sound params [
+"_className",
+["_distance",        100,               [0]         ],
+["_pitch",           0.95 + random 0.1, [0]         ],
+["_isSpeech",        false,             [false, 0]  ],
+["_offSet",          0,                 [0]         ],
+["_simSpeedOfSound", false,             [false]     ]
+];
+
+
+_source say3D [_className, _distance, _pitch, _isSpeech, _offSet, _simSpeedOfSound];
