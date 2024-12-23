@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14.845472,7.4365573,-13.496458};
-		dir[]={-0.00010349175,-0.34636998,-0.93809992};
-		up[]={-3.8187602e-05,0.93809772,-0.34637102};
-		aside[]={-1.0000025,4.685333e-09,0.00011024465};
+		pos[]={13.652177,6.8884959,-16.017788};
+		dir[]={0.51800597,-0.31081367,-0.79692358};
+		up[]={0.16939372,0.9504689,-0.26060233};
+		aside[]={-0.8384487,2.2060703e-08,-0.54499799};
 	};
 };
 binarizationWanted=0;
@@ -30,10 +30,9 @@ addons[]=
 	"ace_realisticnames",
 	"ace_ballistics",
 	"A3_Characters_F",
-	"A3_Characters_F_Enoch",
-	"zrn_vanilla",
-	"A3_Soft_F_Exp_Offroad_02",
-	"Characters_f_lxWS_headgear"
+	"characters_f_vietnam_03_c",
+	"ace_medical_treatment",
+	"A3_Soft_F_Exp_Offroad_02"
 };
 class AddonsMetaData
 {
@@ -63,17 +62,17 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="A3_Characters_F_Enoch";
-			name="Arma 3 Contact Platform - Characters and Clothing";
-			author="Bohemia Interactive";
+			className="characters_f_vietnam_03_c";
+			name="characters_f_vietnam_03_c";
+			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
 		class Item4
 		{
-			className="zrn_vanilla";
-			name="zrn - Compatibility for Vanilla Assets";
-			author="OverlordZorn[CVO]";
-			url="https://github.com/OverlordZorn/ZRN-Modify-Gear";
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
 		class Item5
 		{
@@ -86,9 +85,8 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"Enoch",
-	"Expansion",
-	"ws"
+	"VN",
+	"Expansion"
 };
 randomSeed=4540948;
 class ScenarioData
@@ -121,7 +119,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=4;
 		class Item0
 		{
 			dataType="Object";
@@ -192,8 +190,17 @@ class Mission
 						{
 							class uniform
 							{
-								typeName="U_I_E_Uniform_01_shortsleeve_F";
+								typeName="vn_b_uniform_macv_05_17";
 								isBackpack=0;
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="ACE_suture";
+										count=700;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -240,21 +247,6 @@ class Mission
 				};
 				nAttributes=1;
 			};
-		};
-		class Item4
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={16.015259,4.9462652,-17.999653};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=201;
-			type="Headgear_lxWS_H_turban_03_red";
 		};
 	};
 };
