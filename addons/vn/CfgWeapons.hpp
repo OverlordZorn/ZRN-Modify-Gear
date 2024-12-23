@@ -14,6 +14,7 @@ class CfgWeapons
 
     #include "Pilothelmets.hpp"
     #include "Booniehats.hpp"
-//    #include "Uniforms.hpp"
+    #include "Uniforms_B.hpp"
+    #include "Uniforms_O.hpp"
 };
 

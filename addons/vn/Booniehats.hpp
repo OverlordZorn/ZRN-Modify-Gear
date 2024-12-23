@@ -12,20 +12,20 @@
 #define CN(variation,color) vn_b_boonie_##variation##_##color
 
 // Base Boonie
-#define CLR_BASE 01
-class CN(02,CLR_BASE) : vn_b_headgear_base { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR_BASE)), Q(CN(03,CLR_BASE)), Q(CN(04,CLR_BASE)), Q(CN(05,CLR_BASE)) }; }; };
-class CN(01,CLR_BASE) : CN(02,CLR_BASE)    { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(02,CLR_BASE)), Q(CN(03,CLR_BASE)), Q(CN(04,CLR_BASE)), Q(CN(05,CLR_BASE)) }; }; };
-class CN(03,CLR_BASE) : CN(02,CLR_BASE)    { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR_BASE)), Q(CN(02,CLR_BASE)), Q(CN(04,CLR_BASE)), Q(CN(05,CLR_BASE)) }; }; };
-class CN(04,CLR_BASE) : CN(02,CLR_BASE)    { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR_BASE)), Q(CN(02,CLR_BASE)), Q(CN(03,CLR_BASE)), Q(CN(05,CLR_BASE)) }; }; };
-class CN(05,CLR_BASE) : CN(02,CLR_BASE)    { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR_BASE)), Q(CN(02,CLR_BASE)), Q(CN(03,CLR_BASE)), Q(CN(04,CLR_BASE)) }; }; };
+#define CAMO_BASE 01
+class CN(02,CAMO_BASE) : vn_b_headgear_base { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
+class CN(01,CAMO_BASE) : CN(02,CAMO_BASE)   { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
+class CN(03,CAMO_BASE) : CN(02,CAMO_BASE)   { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
+class CN(04,CAMO_BASE) : CN(02,CAMO_BASE)   { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
+class CN(05,CAMO_BASE) : CN(02,CAMO_BASE)   { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)) }; }; };
 
 
-#define CN_COLORS(CLR)\
-class CN(02,CLR) : CN(02,01)  { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR)), Q(CN(03,CLR)), Q(CN(04,CLR)), Q(CN(05,CLR)) }; }; };\
-class CN(01,CLR) : CN(02,CLR) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(02,CLR)), Q(CN(03,CLR)), Q(CN(04,CLR)), Q(CN(05,CLR)) }; }; };\
-class CN(03,CLR) : CN(02,CLR) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR)), Q(CN(02,CLR)), Q(CN(04,CLR)), Q(CN(05,CLR)) }; }; };\
-class CN(04,CLR) : CN(02,CLR) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR)), Q(CN(02,CLR)), Q(CN(03,CLR)), Q(CN(05,CLR)) }; }; };\
-class CN(05,CLR) : CN(02,CLR) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CLR)), Q(CN(02,CLR)), Q(CN(03,CLR)), Q(CN(04,CLR)) }; }; };\
+#define CN_COLORS(CAMO)\
+class CN(02,CAMO) : CN(02,01)   { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) }; }; };\
+class CN(01,CAMO) : CN(02,CAMO) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) }; }; };\
+class CN(03,CAMO) : CN(02,CAMO) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) }; }; };\
+class CN(04,CAMO) : CN(02,CAMO) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(05,CAMO)) }; }; };\
+class CN(05,CAMO) : CN(02,CAMO) { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)) }; }; };\
 
 CN_COLORS(02)
 CN_COLORS(03)
