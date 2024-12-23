@@ -78,3 +78,5 @@ class gm_xx_uniform_soldier_bdu_nogloves_80_wdl : gm_ge_army_uniform_soldier_bdu
 class gm_xx_uniform_soldier_bdu_80_oli          : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_gloves_on)    { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_rolled_80_oli), Q(gm_xx_uniform_soldier_bdu_nogloves_80_oli) }; }; };
 class gm_xx_uniform_soldier_bdu_rolled_80_oli   : gm_ge_army_uniform_soldier_bdu_rolled_80_wdl { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up)   { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_oli),        Q(gm_xx_uniform_soldier_bdu_nogloves_80_oli) }; }; };
 class gm_xx_uniform_soldier_bdu_nogloves_80_oli : gm_ge_army_uniform_soldier_bdu_80_wdl        { class PVAR(wardrobe) : EGVAR(wardrobe,base)                { modifiableTo[] = { Q(gm_xx_uniform_soldier_bdu_80_oli),        Q(gm_xx_uniform_soldier_bdu_rolled_80_oli)   }; }; };
+
+
