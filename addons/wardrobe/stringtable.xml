@@ -14,10 +14,10 @@
             </Key>
         </Container>
         <Container name="CBA_Settings">
-            <Key ID="STR_zrn_wardrobe_set_cat_enable">
+            <Key ID="STR_zrn_wardrobe_set_enable">
                 <Original>Enable</Original>
             </Key>
-            <Key ID="STR_zrn_wardrobe_set_cat_enable_desc">
+            <Key ID="STR_zrn_wardrobe_set_enable_desc">
                 <English>When Enabled, will let the player use the Wardrobe Actions.</English>
             </Key>
         </Container>

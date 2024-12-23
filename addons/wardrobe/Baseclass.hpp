@@ -2,13 +2,16 @@ class GVAR(base)
 {
     modifiableTo[] = {""};
 
+    // WIP
     modifiableToWithDependency = "";
     dependency = "";
 
     // Supports Multiple Sounds, will pick one by random.
-    
     sound[] = {"click"}; // I need a better default Sound
     soundEnd[] = {""};
+
+    // Gesture
+    gesture = "Gear";
 
     // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleves"
     alternativePicture = "";
@@ -28,5 +31,5 @@ class GVAR(base_U_jacket_closed) : GVAR(base) { alternativeDisplayName = CSTRING
 
 
 // Common Base Class for Helmets with a Visor that can be flipped up or down
-class GVAR(base_H_visor_up)   : GVAR(base) { sound[] = {""}; soundEnd[] = {"click"}; alternativeDisplayName = CSTRING(visorUp); };
-class GVAR(base_H_visor_down) : GVAR(base) { sound[] = {""}; soundEnd[] = {"click"}; alternativeDisplayName = CSTRING(visorDown); };
+class GVAR(base_H_visor_up)   : GVAR(base) { gesture ="gestureNod"; sound[] = {""}; soundEnd[] = {"click"}; alternativeDisplayName = CSTRING(visorUp); };
+class GVAR(base_H_visor_down) : GVAR(base) { gesture ="gestureNod"; sound[] = {""}; soundEnd[] = {"click"}; alternativeDisplayName = CSTRING(visorDown); };

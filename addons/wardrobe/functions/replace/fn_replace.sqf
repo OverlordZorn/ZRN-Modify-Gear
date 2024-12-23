@@ -20,7 +20,8 @@
 params ["_target", "_player", "_actionParams"];
 _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
-[_player, "Gear"] call ace_common_fnc_doGesture;
+
+[ _player, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
 
 private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
 
